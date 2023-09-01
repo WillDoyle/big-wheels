@@ -481,15 +481,6 @@ h2 {
   font-size: 1.5em;
 }
 
-.instagram-feed {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}
-
 .instagram-post {
   width: calc(33.33% - 10px);
   margin: 5px;
@@ -512,8 +503,9 @@ h2 {
 }
 
 .instagram-feed {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 4em 0em;
 }
 
 .eapps-instagram-feed-header-follow-button-label {
