@@ -1,4 +1,7 @@
-window.onscroll = function() {scrollFunction(), removeLink()};
+window.onscroll = function() {scrollFunction(), removeLink();};
+const body = document.querySelector('body');
+
+
 function scrollFunction() {
 if(location.pathname=="/index.html"){
     if (window.innerWidth > 960) {
@@ -30,5 +33,8 @@ const elementsToRemove = document.querySelectorAll('a[href="https://elfsight.com
 elementsToRemove.forEach((element) => {
   element.remove();
   console.log('Removed link');
+  element.style.display = "none";
 });
 }
+
+window.addEventListener('load', removeLink);
