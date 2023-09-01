@@ -511,6 +511,11 @@ h2 {
   font-weight: 800;
 }
 
+a[href="https://elfsight.com/instagram-feed-instashow/?utm_source=websites&utm_medium=clients&utm_content=instashow&utm_term=127.0.0.1&utm_campaign=free-widget"]
+{
+  display: none;
+}
+
 .eapps-instagram-feed-header-follow-button-label {
   font-weight: 600;
 }
