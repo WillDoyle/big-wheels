@@ -511,6 +511,10 @@ h2 {
   font-weight: 800;
 }
 
+.eapps-instagram-feed-header-follow-button-label {
+  font-weight: 600;
+}
+
 .instagram-post img {
   max-width: 100%;
   height: auto;
