@@ -25,10 +25,12 @@
 
     <body>
       <nav id="navBar">
-        <div class="logo__wrapper">
-          <img class="site__logo" src="./assets/bigwheelslogo.png" alt="" />
-        </div>
         <ul class="nav__links">
+          <div class="logo__wrapper">
+            <a href="index.html">
+              <img class="site__logo" src="./assets/bigwheelslogo.png" alt="" />
+            </a>
+          </div>
           <li class="nav__link">
             <a class="link__hover-effect nav__link--anchor" href="index.html"
               >HOME</a
@@ -58,9 +60,71 @@
             >
           </li>
         </ul>
+
+        <ul class="social__links">
+          <li class="social__link">
+            <a
+              class="social__anchor"
+              target="_blank"
+              href="https://www.instagram.com/bigwheelsband/"
+              ><img src="./assets/instagram.svg" alt="" class="social__img"
+            /></a>
+          </li>
+
+          <li class="social__link">
+            <a
+              class="social__anchor"
+              target="_blank"
+              href="https://www.facebook.com/bigwheelsbandofficial"
+              ><img src="./assets/facebook.svg" alt="" class="social__img"
+            /></a>
+          </li>
+
+          <li class="social__link">
+            <a
+              class="social__anchor"
+              target="_blank"
+              href="https://www.youtube.com/channel/UCbwNh-YCqiH2tbDORxYhwXw"
+              ><img src="./assets/youtube.svg" alt="" class="social__img"
+            /></a>
+          </li>
+
+          <li class="social__link">
+            <a
+              class="social__anchor"
+              target="_blank"
+              href="https://www.tiktok.com/@bigwheelsband"
+              ><img src="./assets/tiktok.svg" alt="" class="social__img"
+            /></a>
+          </li>
+        </ul>
       </nav>
       <script src="script.js"></script>
     </body>
   </head>
+  <style>
+    .social__links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .social__link {
+      margin-left: 1em;
+      padding: 0.5em;
+      background-color: #655a3f;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+    }
+
+    .social__img {
+      padding: 0.35em;
+      height: 35px;
+      width: 35px;
+
+      filter: invert();
+    }
+  </style>
 </html>
-<style></style>
