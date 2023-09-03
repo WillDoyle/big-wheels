@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction(), removeLink();};
+window.onscroll = function() {scrollFunction(), removeLink(); console.log('hi');};
 const body = document.querySelector('body');
 
 
