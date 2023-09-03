@@ -3,6 +3,7 @@ const body = document.querySelector('body');
 
 
 function scrollFunction() {
+  removeLink();
     if (window.innerWidth > 960) {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("cover").style.transform = "scale(0.6)";
