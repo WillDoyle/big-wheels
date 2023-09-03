@@ -1,28 +1,23 @@
-window.onscroll = function() {scrollFunction(), removeLink(); console.log('hi');};
+window.onscroll = function() {scrollFunction();};
 const body = document.querySelector('body');
 
 
 function scrollFunction() {
-if(location.pathname=="/index.html"){
+  if (location.pathname == "/index.html") {
     if (window.innerWidth > 960) {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop < 50) {
-      document.getElementById("cover").style.scale = "1";
-      document.getElementById("navBar").style.maxWidth = "100%";
-      console.log('Default cover photo');
-  
-    } else {
-      document.getElementById("cover").style.scale = "0.6";
-      document.getElementById("navBar").style.maxWidth = "1000px";
-      console.log('Smaller cover photo');
-      
-      
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("cover").style.transform = "scale(0.6)";
+        document.getElementById("navBar").style.maxWidth = "1000px";
+        
+      } else {
+        document.getElementById("cover").style.transform = "scale(1)";
+        document.getElementById("navBar").style.maxWidth = "100%";
+        
+      }
     }
-    }
+  } else {
+    // Do nothing
   }
-    else{
-      //Do nothing
-      
-    }
 }
 
 function removeLink(){
