@@ -3,7 +3,6 @@ const body = document.querySelector('body');
 
 
 function scrollFunction() {
-  if (location.pathname == "/index.html") {
     if (window.innerWidth > 960) {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("cover").style.transform = "scale(0.6)";
@@ -14,7 +13,7 @@ function scrollFunction() {
         document.getElementById("navBar").style.maxWidth = "100%";
         
       }
-    }
+
   } else {
     // Do nothing
   }
