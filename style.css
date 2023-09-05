@@ -466,6 +466,8 @@ nav {
 /* INSTAGRAM SECTION */
 
 #instagram {
+  display: flex;
+  flex-direction: row;
   background-color: #655a3f;
   height: fit-content;
 }
@@ -475,7 +477,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2em 0em;
+  padding: 5em 0em 0em 0em;
   margin: 0 auto;
 }
 
@@ -524,4 +526,14 @@ h2 {
 .instagram-post img {
   max-width: 100%;
   height: auto;
+}
+
+.spotify__wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
