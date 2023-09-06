@@ -44,11 +44,11 @@
           </div>
           <div class="video__controls">
 
-            <div class="control"><a id="copy" href="https://youtu.be/naDm3lDhs1U?si=48GeAzXHcE8CYTY7"><button
-                  onclick="copyLinkToClipboard()"></a><span class="material-symbols-rounded">
+            <div class="control" id="control1"><a id="copy" href="https://youtu.be/naDm3lDhs1U?si=48GeAzXHcE8CYTY7"><button
+                  onclick="copyLinkToClipboard('copied1')"></a><span class="material-symbols-rounded">
                 link
               </span></button>
-              <div id="copied" class="copied">Linked copied to clipboard!</div>
+              <div id="copied1" class="copied">Linked copied to clipboard!</div>
             </div>
             <a target="_blank" href="https://youtu.be/naDm3lDhs1U?si=Ph_lswLtLJEnEbaU">
               <div class="control"><span class="material-symbols-rounded">
@@ -72,11 +72,11 @@
           </div>
           <div class="video__controls">
 
-            <div class="control"><a id="copy" href="https://youtu.be/qpa371PwY8M?si=-qwvkzsDEQ6TPmcd"><button
-                  onclick="copyLinkToClipboard()"></a><span class="material-symbols-rounded">
+            <div class="control" id="control2"><a id="copy" href="https://youtu.be/qpa371PwY8M?si=-qwvkzsDEQ6TPmcd"><button
+                  onclick="copyLinkToClipboard('copied2')"></a><span class="material-symbols-rounded">
                 link
               </span></button>
-              <div id="copied" class="copied">Linked copied to clipboard!</div>
+              <div id="copied2" class="copied">Linked copied to clipboard!</div>
             </div>
             <a target="_blank" href="https://youtu.be/qpa371PwY8M?si=-qwvkzsDEQ6TPmcd">
               <div class="control"><span class="material-symbols-rounded">
@@ -107,7 +107,8 @@
     align-items: center;
     justify-content: center;
     padding-top: 7em;
-    height: 80vh;
+    padding-bottom: 7em;
+    height: fit-content;
     background-color: #fff;
   }
 
@@ -177,6 +178,7 @@
     display: none;
     transition: all 300ms ease-in-out;
     width: 150px;
+    
   }
 
 

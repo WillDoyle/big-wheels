@@ -20,42 +20,42 @@ function scrollFunction() {
   }
 }
 
-//CHANGE FROM ID TO DIV TO MAKE IT RELEVANT ON EACH BUTTON
-const copied = document.getElementById('copied');
 
-function copyLinkToClipboard() {
-  // Select the link element
-  const link = document.getElementById('copy');
+function copyLinkToClipboard(copiedId) {
+  // Get the parent element of the button that was clicked
+  const parentElement = document.getElementById(copiedId).closest('.control');
+
+  // Get the href from the parent's <a> element
+  const linkToCopy = parentElement.querySelector('a').getAttribute('href');
+
+  // Create a temporary textarea element to copy the link to the clipboard
+  const textarea = document.createElement('textarea');
+  textarea.value = linkToCopy;
+  textarea.style.position = 'fixed'; // Ensure it's not visible
+  document.body.appendChild(textarea);
   
-  
-
-  copied.style.display = "block";
-
-  // Create a temporary input element to hold the link URL
-  const tempInput = document.createElement('input');
-  tempInput.value = link.href;
-
-  // Append the input element to the DOM
-  document.body.appendChild(tempInput);
-
-  // Select the input element's value
-  tempInput.select();
-
-  // Copy the selected text to the clipboard
+  // Select the text in the textarea and copy it to the clipboard
+  textarea.select();
   document.execCommand('copy');
 
-  // Remove the temporary input element from the DOM
-  document.body.removeChild(tempInput);
+  // Remove the temporary textarea
+  document.body.removeChild(textarea);
 
-  // Alert the user that the link has been copied
-  setTimeout(hideElement, 2000);
+  // Show the specific copied element when the button is clicked
+  const copiedElement = document.getElementById(copiedId);
+  copiedElement.style.display = 'block';
 
+  // Hide the copied element after a certain duration (e.g., 3 seconds)
+  setTimeout(() => {
+    copiedElement.style.display = 'none';
+  }, 3000); // Adjust the duration as needed
 }
+
 
 function hideElement(){
   
-  copied.style.display = "none";
-  console.log('hidden');
+  // copied.style.display = "none";
+  // console.log('hidden');
 }
 
 
