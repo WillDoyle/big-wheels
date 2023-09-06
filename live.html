@@ -87,6 +87,32 @@
 
         </div>
 
+        <div class="controls__wrapper">
+
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pKwQUbXpShU?si=9v7fdDiIVOwKqKKA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+
+          </div>
+          <div class="video__controls">
+
+            <div class="control" id="control3"><a id="copy" href="https://youtu.be/pKwQUbXpShU?si=AVROQ8LQ4H2D86yQ"><button
+                  onclick="copyLinkToClipboard('copied3')"></a><span class="material-symbols-rounded">
+                link
+              </span></button>
+              <div id="copied3" class="copied">Linked copied to clipboard!</div>
+            </div>
+            <a target="_blank" href="https://youtu.be/pKwQUbXpShU?si=AVROQ8LQ4H2D86yQ">
+              <div class="control"><span class="material-symbols-rounded">
+                  open_in_new
+                </span></div>
+            </a>
+          </div>
+
+        </div>
+
 
 
 
@@ -106,8 +132,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 7em;
-    padding-bottom: 7em;
+    padding-top: 10em;
+    padding-bottom: 2em;
     height: fit-content;
     background-color: #fff;
   }
@@ -118,6 +144,7 @@
     height: fit-content;
     flex-direction: column;
     background-color: #655a3f;
+    padding-bottom: 7em;
   }
 
   .youtube__wrapper {
