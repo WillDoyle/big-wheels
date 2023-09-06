@@ -20,6 +20,45 @@ function scrollFunction() {
   }
 }
 
+//CHANGE FROM ID TO DIV TO MAKE IT RELEVANT ON EACH BUTTON
+const copied = document.getElementById('copied');
+
+function copyLinkToClipboard() {
+  // Select the link element
+  const link = document.getElementById('copy');
+  
+  
+
+  copied.style.display = "block";
+
+  // Create a temporary input element to hold the link URL
+  const tempInput = document.createElement('input');
+  tempInput.value = link.href;
+
+  // Append the input element to the DOM
+  document.body.appendChild(tempInput);
+
+  // Select the input element's value
+  tempInput.select();
+
+  // Copy the selected text to the clipboard
+  document.execCommand('copy');
+
+  // Remove the temporary input element from the DOM
+  document.body.removeChild(tempInput);
+
+  // Alert the user that the link has been copied
+  setTimeout(hideElement, 2000);
+
+}
+
+function hideElement(){
+  
+  copied.style.display = "none";
+  console.log('hidden');
+}
+
+
 function removeLink(){
 // 1. Select the elements based on their href attribute
 const elementsToRemove = document.querySelectorAll('a[href="https://elfsight.com/instagram-feed-instashow/?utm_source=websites&utm_medium=clients&utm_content=instashow&utm_term=127.0.0.1&utm_campaign=free-widget"]');

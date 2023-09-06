@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIG WHEELS | MERCH</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+  </style>
+
+  <body>
+    <header>
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+    <main>
+      <section id="merch">
+        <h1 class="cta__header">SHOP OUR NEWEST TEES</h1>
+        <div class="merch__wrapper">
+          <a href="./merch/unisex-white-ringer-tee.html">
+            <div class="merch__item">
+              <div class="merch__img retro-white" alt=""></div>
+              <div class="merch__header">Unisex Retro White Ringer Tee</div>
+              <div class="merch__price">AUD$34.99</div>
+            </div>
+          </a>
+
+          <div class="merch__item">
+            <div class="merch__img retro-brown" alt=""></div>
+            <div class="merch__header">Unisex Retro Brown Ringer Tee</div>
+            <div class="merch__price">AUD$34.99</div>
+          </div>
+
+          <div class="merch__item">
+            <div class="merch__img retro-blue" alt=""></div>
+            <div class="merch__header">Unisex Retro Sky Blue Ringer Tee</div>
+            <div class="merch__price">AUD$34.99</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script id="replace_with_footer" src="footer.js"></script>
+  </body>
+
+  <style>
+    #merch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 7em;
+      height: 100vh;
+      background-color: #655a3f;
+    }
+
+    .merch__wrapper a {
+      font-weight: 600;
+    }
+
+    .merch__img {
+      /* Set the background size to cover the entire card */
+      background-size: cover;
+
+      /* Center the background image both horizontally and vertically */
+      background-position: center center;
+
+      /* Make the background image not repeat */
+      background-repeat: no-repeat;
+
+      /* Add padding or margin as needed for spacing */
+
+      /* Set the card's dimensions, or use percentage for responsiveness */
+      width: 100%; /* This makes the card width 100% of its container */
+      max-width: 400px; /* Set a maximum width for larger screens */
+      height: 300px;
+      margin: 0 auto;
+
+      /* You can add other styles as needed */
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Add more styles for your card design */
+    }
+
+    .retro-white {
+      /* Set the background image URL */
+      background-image: url("./assets/retro-white-1.jpg");
+      transition: all 300ms ease-in-out;
+    }
+
+    .retro-brown {
+      background-image: url("./assets/retro-brown-1.jpg");
+      transition: all 300ms ease-in-out;
+    }
+
+    .retro-blue {
+      background-image: url("./assets/retro-blue-1.jpg");
+      transition: all 300ms ease-in-out;
+    }
+
+    .merch__item:hover .retro-white {
+      background-image: url("./assets/retro-white-2.jpg");
+    }
+
+    .merch__item:hover .retro-brown {
+      background-image: url("./assets/retro-brown-2.jpg");
+    }
+
+    .merch__item:hover .retro-blue {
+      background-image: url("./assets/retro-blue-2.jpg");
+    }
+
+    .merch__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .merch__header,
+    .merch__price {
+      margin: 1em 0em;
+      color: #ccc;
+      padding: 0.5em 1em;
+    }
+
+    .merch__price {
+      color: #fff;
+      font-size: 1.25em;
+    }
+
+    .merch__item {
+      border: 3px solid #ccc;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 0em 2em;
+      transition: all 300ms ease-in-out;
+    }
+
+    .merch__item:hover {
+      transform: translateY(2px);
+      border: 3px solid #fbe19f;
+    }
+  </style>
+</html>

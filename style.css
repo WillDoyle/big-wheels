@@ -108,6 +108,11 @@ section {
   display: block;
 }
 
+::selection {
+  background-color: #fbe19f;
+  color: #655a3f;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -335,8 +340,9 @@ nav {
 
 #upcoming-shows {
   height: fit-content;
-  background: #ffcf5a;
+  background: #fff;
   position: relative;
+  padding: 5em 0em;
 }
 .wrapper {
   max-width: 100%;
