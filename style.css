@@ -216,6 +216,18 @@ nav {
   background-color: white;
 }
 
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .nav__link--anchor {
   margin: 0 12px;
   color: #786a4a;

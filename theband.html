@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BIG WHEELS | THE BAND</title>
+    <link rel="icon" type="image/x-icon" href="/assets/bigwheelslogo.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <style>
@@ -16,74 +18,104 @@
     </header>
 
     <section id="bio">
-      <h1>Bio</h1>
-      <div class="underline"></div>
-      <div class="bio__wrapper">
-        <h2>
-          Emerging from the vibrant music scene of Sydney, Australia, Big Wheels
-          is a powerhouse golden-rock duo crafting a timeless sound that
-          seamlessly blends nostalgia with a fresh, contemporary edge.
-          <br /><br />
-          <br />
-          Known for their unique blend of classic rock influences and the
-          dynamic vocal force of Cass Ford and Lawson Doyle, Big Wheels has most
-          recently returned from a sold out 11-date UK tour with Sofar Sounds.
+      <div class="bio__container">
+        <h1>Bio</h1>
+        <div class="underline"></div>
 
-          <br /><br />
-          <br />
-          The release of their debut single ‘Chain of Fire’ in early 2022
-          followed by the subsequent ‘All I Ever Wanna Do’ later that year sent
-          the band onto a trail of both national and international recognition
-          right off the bat, receiving airplay on BBC Introducing and a live
-          studio performance on ABC’s tv series ‘Frankly’.
+        <div class="bio__wrapper">
+          <h2>
+            Emerging from the vibrant music scene of Sydney, Australia, Big
+            Wheels is a powerhouse golden-rock duo crafting a timeless sound
+            that seamlessly blends nostalgia with a fresh, contemporary edge.
+            <br /><br />
+            <br />
+            Known for their unique blend of classic rock influences and the
+            dynamic vocal force of
+            <a target="_blank" href="https://www.instagram.com/cass.ford.music/"
+              >Cass Ford</a
+            >
+            and
+            <a target="_blank" href="https://www.instagram.com/l.t.doyle/"
+              >Lawson Doyle</a
+            >, Big Wheels has most recently returned from a sold out 11-date UK
+            tour with Sofar Sounds.
 
-          <br /><br />
-          <br />
-          So far in 2023, Big Wheels has been turning even more heads locally,
-          nationally and internationally, with their two latest releases
-          ‘Colourblind’ and ‘Hurricane Therapy’ making waves on Triple J Home &
-          Hosed, FBi Radio (NSW), Triple R (VIC) and most recently Paul
-          Gallagher ‘Introduces’ Radio Show (UK). Their highly electric live
-          show has secured some highly notable Australian support slots for San
-          Cisco, Pacific Avenue, The Rions, DICE, Rum Jungle, The Pleasures and
-          Lazy Ghost.
+            <br /><br />
+            <br />
+            The release of their debut single ‘Chain of Fire’ in early 2022
+            followed by the subsequent ‘All I Ever Wanna Do’ later that year
+            sent the band onto a trail of both national and international
+            recognition right off the bat, receiving airplay on BBC Introducing
+            and a live studio performance on ABC’s tv series ‘Frankly’.
 
-          <br /><br />
-          <br />
-          Formed against the backdrop of a sleepy suburb on the Sunshine Coast,
-          Big Wheels came together in late 2021, driven by a shared love for the
-          raw, emotive power of blues, rock 'n' roll and country music. The
-          undeniable songwriting connection between Cass & Lawson exemplifies
-          their combining yet conflicting perspectives on romance, ego, life and
-          individuality, taking you down a rabbit hole of comforting
-          relatability. Cass’ soulful and emotive delivery pairs seamlessly with
-          Lawson’s raw and powerful vocals, creating a sonic tapestry that
-          leaves a lasting impression.
+            <br /><br />
+            <br />
+            So far in 2023, Big Wheels has been turning even more heads locally,
+            nationally and internationally, with their two latest releases
+            ‘Colourblind’ and ‘Hurricane Therapy’ making waves on Triple J Home
+            & Hosed, FBi Radio (NSW), Triple R (VIC) and most recently Paul
+            Gallagher ‘Introduces’ Radio Show (UK). Their highly electric live
+            show has secured some highly notable Australian support slots for
+            San Cisco, Pacific Avenue, The Rions, DICE, Rum Jungle, The
+            Pleasures and Lazy Ghost.
 
-          <br /><br />
-          <br />
-          With inspiration drawn from the likes of Fleetwood Mac, Oasis, Neil
-          Young, and Jefferson Airplane, Big Wheels has carved out a distinct
-          musical identity weaving together unforgettable melodies, lush
-          harmonies, mesmerizing guitar work and lyrics that resonate with every
-          aspect of life.
-        </h2>
+            <br /><br />
+            <br />
+            Formed against the backdrop of a sleepy suburb on the Sunshine
+            Coast, Big Wheels came together in late 2021, driven by a shared
+            love for the raw, emotive power of blues, rock 'n' roll and country
+            music. The undeniable songwriting connection between Cass & Lawson
+            exemplifies their combining yet conflicting perspectives on romance,
+            ego, life and individuality, taking you down a rabbit hole of
+            comforting relatability. Cass’ soulful and emotive delivery pairs
+            seamlessly with Lawson’s raw and powerful vocals, creating a sonic
+            tapestry that leaves a lasting impression.
+
+            <br /><br />
+            <br />
+            With inspiration drawn from the likes of Fleetwood Mac, Oasis, Neil
+            Young, and Jefferson Airplane, Big Wheels has carved out a distinct
+            musical identity weaving together unforgettable melodies, lush
+            harmonies, mesmerizing guitar work and lyrics that resonate with
+            every aspect of life.
+          </h2>
+        </div>
+        <img src="./assets/bigwheelslogo.png" alt="" class="big__logo" />
+      </div>
+      <div class="bio__container">
+        <img class="bio__img" src="./assets/bigwheels050.jpg" alt="" />
+        <img class="bio__img" src="./assets/bigwheels-1.jpg" alt="" />
+        <img class="bio__img reveal" src="./assets/BIGBARBICAN030.jpg" alt="" />
+        <img class="bio__img reveal" src="./assets/daydreams.jpg" alt="" />
       </div>
     </section>
 
     <script id="replace_with_footer" src="footer.js"></script>
+    <script>
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+    </script>
   </body>
 
   <style>
     #bio {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      flex-direction: row;
 
       padding-top: 7em;
-      height: fit-content;
-      background-color: #655a3f;
+      height: 100%;
+      overflow: hidden;
     }
 
     .underline {
@@ -92,7 +124,7 @@
       height: 3px;
       width: 100%;
       border-radius: 10px;
-      margin: 1em;
+      margin: 0.5em auto;
     }
 
     #bio h1 {
@@ -101,17 +133,76 @@
       margin-top: 2em;
     }
 
+    .bio__container {
+      display: flex;
+      align-items: stretch;
+
+      background-color: #655a3f;
+      flex-direction: column;
+      z-index: 1;
+      width: 50%;
+      overflow: hidden;
+    }
+
+    .bio__container:nth-child(2) {
+      display: flex;
+      align-items: stretch;
+      background-color: #eae6dc;
+      align-items: center;
+    }
+
     .bio__wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 3em;
+      z-index: 3;
+      overflow: hidden;
+    }
+
+    .site__logo {
+      margin: 0 auto;
+    }
+
+    .big__logo {
+      max-width: 90px;
+      margin: 3em auto;
+      transition: all 300ms ease;
+    }
+
+    .big__logo:hover {
+      transform: rotate(30deg);
+    }
+
+    #bio .bio__container h1 {
+      margin: 0 auto;
+      margin-top: 1em;
       text-align: center;
-      max-width: 800px;
-      margin: 5em 0em;
+    }
+
+    .bio__img {
+      position: sticky;
+      width: 100%;
+      max-width: 600px;
+      object-fit: cover;
+
+      z-index: 1;
+
+      margin: 3em 0em;
+    }
+
+    .bio__wrapper a {
+      color: #d4be86;
+      font-weight: 400;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      text-decoration: underline;
     }
 
     #bio h2 {
-      font-size: 1.25em;
+      font-size: 1em;
       line-height: 1.5;
       font-weight: 100;
       font-family: Georgia, "Times New Roman", Times, serif;
