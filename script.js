@@ -21,6 +21,9 @@ function scrollFunction() {
 }
 
 
+
+
+
 function copyLinkToClipboard(copiedId) {
   // Get the parent element of the button that was clicked
   const parentElement = document.getElementById(copiedId).closest('.control');

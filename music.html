@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIG WHEELS | MUSIC</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+  </style>
+
+  <body>
+    <header>
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+    <main>
+      <section id="music">
+        <h1 id="music__header" class="cta__header">
+          OUT NOW <br />
+          <span class="music__text">'HURRICANE THERAPY'</span>
+        </h1>
+
+        <div class="music__background" src="" alt=""></div>
+
+        <img
+          id="music__img"
+          class="cta__img"
+          src="./assets/hurricane therapy.jpg"
+          alt=""
+        />
+        <div class="streaming__wrapper">
+          <a
+            target="_blank"
+            href="https://open.spotify.com/track/3egwWcskG9FeZHrA2Qyy2h?si=fb271106da824a97"
+          >
+            <img
+              src="./assets/spotify-dark.png"
+              alt=""
+              class="streaming__img"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://music.apple.com/us/album/hurricane-therapy/1689874934?i=1689875176"
+          >
+            <img
+              src="./assets/apple-music-dark.png"
+              alt=""
+              class="streaming__img"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://bigwheelsbandofficial.bandcamp.com/track/hurricane-therapy"
+          >
+            <img
+              src="./assets/bandcamp-dark.png"
+              alt=""
+              class="streaming__img"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section id="instagram">
+        <div class="spotify__wrapper">
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/2oAWHEdC4K2gTv29qWXlMp?utm_source=generator&theme=0"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/43TxkVkRAHwvdkYuwLkUKp?utm_source=generator"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/31ZCLQSie6ridr3f0v1IP6?utm_source=generator"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/3egwWcskG9FeZHrA2Qyy2h?utm_source=generator"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script>
+      window.onscroll = function () {
+        changeMusic();
+      };
+
+      window.addEventListener("load", changeMusic);
+
+      var musicElement = document.getElementById("music");
+      var musicHeader = document.getElementById("music__header");
+      var musicSection = document.getElementById("music");
+      var streamingImages = document.querySelectorAll(".streaming__img");
+
+      function changeMusic() {
+        if (
+          document.body.scrollTop > 10 ||
+          document.documentElement.scrollTop < 100
+        ) {
+          musicElement.classList.add("background");
+          musicHeader.classList.add("white");
+
+          for (var i = 0; i < streamingImages.length; i++) {
+            var imgElement = streamingImages[i];
+            imgElement.classList.add("invert");
+          }
+        } else {
+          musicElement.classList.remove("background");
+          musicHeader.classList.remove("white");
+
+          for (var i = 0; i < streamingImages.length; i++) {
+            var imgElement = streamingImages[i];
+            imgElement.classList.remove("invert");
+          }
+        }
+      }
+    </script>
+  </body>
+
+  <style>
+    ::selection {
+      background-color: #655a3f;
+      color: #fbe19f;
+    }
+    #music {
+      position: sticky;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      top: 0;
+
+      height: 160vh;
+      padding: 10em 0em 20em 0em;
+
+      background-color: #fff;
+      transition: all 300ms ease-in-out;
+      overflow: hidden;
+
+      /* Center the background image both horizontally and vertically */
+      /* Make the background image not repeat */
+    }
+
+    .music__text {
+      font-weight: 100;
+      font-size: 0.7em;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .music__background {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-position: 50% 0%;
+      /* background-image: url("./assets/daydreams.jpg"); */
+      /* Set the background size to cover the entire card */
+      background-size: cover;
+      opacity: 1;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      height: 0;
+    }
+
+    .invert {
+      filter: brightness(0) invert(1);
+    }
+
+    #music.background {
+      background: #655a3f;
+    }
+
+    #music__header.white {
+      color: #fff;
+      font-size: 10em;
+    }
+
+    .cta__header {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+
+      opacity: 1;
+      color: #242424;
+      margin: 0 auto;
+      text-align: center;
+      white-space: normal;
+      z-index: 1;
+      transition: all 300ms ease-in-out;
+    }
+
+    .cta__img {
+      position: sticky;
+      width: 100%;
+      height: 100%;
+      max-width: 300px;
+      max-height: 300px;
+      padding: 0;
+      opacity: 1;
+    }
+
+    .streaming__wrapper {
+      position: sticky;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 300px;
+      width: 100%;
+      margin-top: 1em;
+    }
+
+    .streaming__img {
+      max-width: 30px;
+      width: 100%;
+      margin: 1em;
+      transition: all 300ms ease-in-out;
+    }
+
+    .streaming__img:hover {
+      opacity: 0.8;
+      transform: translateY(2px);
+    }
+
+    .merch__wrapper a {
+      font-weight: 600;
+    }
+
+    .merch__img {
+      /* Set the background size to cover the entire card */
+      background-size: cover;
+
+      /* Center the background image both horizontally and vertically */
+      background-position: center center;
+
+      /* Make the background image not repeat */
+      background-repeat: no-repeat;
+
+      /* Add padding or margin as needed for spacing */
+
+      /* Set the card's dimensions, or use percentage for responsiveness */
+      width: 100%; /* This makes the card width 100% of its container */
+      max-width: 400px; /* Set a maximum width for larger screens */
+      height: 300px;
+      min-width: 300px;
+      margin: 0 auto;
+
+      /* You can add other styles as needed */
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Add more styles for your card design */
+    }
+
+    .merch__img {
+      /* Add padding or margin as needed for spacing */
+
+      /* Set the card's dimensions, or use percentage for responsiveness */
+      width: 100%; /* This makes the card width 100% of its container */
+      max-width: 400px; /* Set a maximum width for larger screens */
+      height: 300px;
+      margin: 0 auto;
+
+      /* You can add other styles as needed */
+
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Add more styles for your card design */
+    }
+
+    .merch__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .merch__header,
+    .merch__price {
+      margin: 1em 0em;
+      color: #242424;
+      padding: 0.5em 1em;
+    }
+
+    .merch__price {
+      color: #242424;
+      font-size: 1.25em;
+    }
+
+    .merch__item {
+      border: 3px solid #242424;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 0em 2em;
+      transition: all 300ms ease-in-out;
+    }
+
+    .merch__item:hover {
+      border: 3px solid #ccc;
+    }
+
+    #instagram {
+      position: relative;
+      background: #242424;
+    }
+  </style>
+</html>
