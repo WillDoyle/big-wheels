@@ -10,19 +10,19 @@
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
   </style>
 
   <body>
     <header>
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
-
+    <img src="./assets/guitar-svg-1.svg" alt="" class="guitar__svg" />
     <section id="bio">
       <div class="bio__container">
-        <h1>Bio</h1>
-        <div class="underline"></div>
-
         <div class="bio__wrapper">
+          <h1>ABOUT <br />THE BAND</h1>
+
           <h2>
             Emerging from the vibrant music scene of Sydney, Australia, Big
             Wheels is a powerhouse golden-rock duo crafting a timeless sound
@@ -83,8 +83,10 @@
         <img src="./assets/bigwheelslogo.png" alt="" class="big__logo" />
       </div>
       <div class="bio__container">
-        <img class="bio__img" src="./assets/bigwheels050.jpg" alt="" />
-        <img class="bio__img" src="./assets/bigwheels-1.jpg" alt="" />
+        <div class="texture"></div>
+        <img class="bio__img" src="./assets/sofar-sounds-1.jpg" alt="" />
+
+        <img class="bio__img" src="./assets/frankly.JPG" alt="" />
         <img class="bio__img reveal" src="./assets/BIGBARBICAN030.jpg" alt="" />
         <img class="bio__img reveal" src="./assets/daydreams.jpg" alt="" />
       </div>
@@ -97,7 +99,7 @@
         for (var i = 0; i < reveals.length; i++) {
           var windowHeight = window.innerHeight;
           var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
+          var elementVisible = 100;
           if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
           }
@@ -136,6 +138,7 @@
     .bio__container {
       display: flex;
       align-items: stretch;
+      position: relative;
 
       background-color: #655a3f;
       flex-direction: column;
@@ -153,18 +156,45 @@
 
     .bio__wrapper {
       display: flex;
-      align-items: center;
       justify-content: center;
+      flex-direction: column;
       text-align: left;
       max-width: 600px;
+      padding: 0em 3em;
       margin: 0 auto;
-      padding: 3em;
       z-index: 3;
       overflow: hidden;
     }
 
+    .guitar__svg {
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 90%;
+
+      transform: translate(-50%, 50%) scale(0.5) rotate(30deg);
+      z-index: 2;
+      transition: all 300ms ease-in-out;
+    }
+
+    .guitar__svg:hover {
+      top: 0;
+      left: 90%;
+
+      transform: translate(-50%, 50%) scale(0.5) rotate(0deg);
+    }
+
     .site__logo {
       margin: 0 auto;
+    }
+
+    .texture {
+      position: absolute;
+      background-image: url("./assets/moroccan-flower-texture.png");
+      height: 100%;
+      width: 100%;
+      opacity: 0.4;
+      z-index: 1;
     }
 
     .big__logo {
@@ -178,9 +208,10 @@
     }
 
     #bio .bio__container h1 {
-      margin: 0 auto;
       margin-top: 1em;
-      text-align: center;
+      text-align: left;
+      font-size: 4em;
+      font-family: "Shrikhand", cursive;
     }
 
     .bio__img {
@@ -194,6 +225,14 @@
       margin: 3em 0em;
     }
 
+    .bio__img:nth-child(odd) {
+      transform: translateX(30px);
+    }
+
+    .bio__img:nth-child(even) {
+      transform: translateX(-30px);
+    }
+
     .bio__wrapper a {
       color: #d4be86;
       font-weight: 400;
@@ -202,7 +241,7 @@
     }
 
     #bio h2 {
-      font-size: 1em;
+      font-size: 1.25em;
       line-height: 1.5;
       font-weight: 100;
       font-family: Georgia, "Times New Roman", Times, serif;
