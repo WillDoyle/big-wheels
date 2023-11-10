@@ -1,3 +1,7 @@
+//service_g2kpj2h service id
+//Z2FSRvzQFlssyX1a0 public key 
+//template_rs0x8jv template id 
+
 window.onscroll = function() {scrollFunction();};
 const body = document.querySelector('body');
 
@@ -44,7 +48,7 @@ const success = document.querySelector('.modal__overlay--success');
 
   loading.classList += ' modal__overlay--visible'
 
-  emailjs.sendForm('service_sa5w9l3', 'template_604z9la', event.target, 'qCzbxfdiTUeWh2Z60')
+  emailjs.sendForm('service_g2kpj2h', 'template_rs0x8jv', event.target, 'Z2FSRvzQFlssyX1a0')
   .then(() => {   
      
          loading.classList.remove("modal__overlay--visible");
