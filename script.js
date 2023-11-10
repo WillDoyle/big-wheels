@@ -2,28 +2,70 @@ window.onscroll = function() {scrollFunction();};
 const body = document.querySelector('body');
 
 
+
 function scrollFunction() {
   removeLink();
     if (window.innerWidth > 960) {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 900) {
         document.getElementById("cover").style.transform = "scale(0.6)";
-        document.getElementById("navBar").style.maxWidth = "1000px";
+        document.getElementById("left-text").style.transform = "translate(-50%, -50%)";
+        document.getElementById("right-text").style.transform = "translate(8%, -50%)";
+
+      }
+      else{
+        document.getElementById("cover").style.transform = "scale(1)";
+        document.getElementById("left-text").style.transform = "translate(-100%, -50%)";
+        document.getElementById("right-text").style.transform = "translate(100%, -50%)";
+
+      }
+
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        
+        //document.getElementById("navBar").style.maxWidth = "1000px";
         
       } else {
-        document.getElementById("cover").style.transform = "scale(1)";
-        document.getElementById("navBar").style.maxWidth = "100%";
+        
+        //document.getElementById("navBar").style.maxWidth = "100%";
         
       }
 
   } else {
     // Do nothing
   }
+
+  
+}
+
+function contact(event){
+  event.preventDefault();
+  
+  const loading = document.querySelector('.modal__overlay--loading');
+const success = document.querySelector('.modal__overlay--success');
+
+  loading.classList += ' modal__overlay--visible'
+
+  emailjs.sendForm('service_sa5w9l3', 'template_604z9la', event.target, 'qCzbxfdiTUeWh2Z60')
+  .then(() => {   
+     
+         loading.classList.remove("modal__overlay--visible");
+  success.classList += " modal__overlay--visible"; setTimeout(() => {
+    success.classList.remove("modal__overlay--visible"); loading.classList.remove('modal__overlay--loading');
+  }, 2000)}).catch(() =>{
+      loading.classList.remove("modal__overlay--visible");
+      alert("The email service is temporarily unavailable. Please contact me directly on 19doylew@gmail.com");
+  })
 }
 
 
 
+function removeModal(){
+  const loading = document.querySelector('.modal__overlay--loading');
+const success = document.querySelector('.modal__overlay--success');
 
 
+  success.classList.remove("modal__overlay--visible");
+  loading.classList.remove("modal__overlay--visible");
+}
 
 
 function copyLinkToClipboard(copiedId) {

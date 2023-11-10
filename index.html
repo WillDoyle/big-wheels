@@ -6,6 +6,12 @@
     <title>BIG WHEELS | HOME</title>
     <link rel="icon" type="image/x-icon" href="/assets/bigwheelslogo.png" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="index.js"></script>
+
   </head>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
@@ -16,19 +22,100 @@
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
     <main>
-      <section id="landing">
-        <section id="cover"></section>
-      </section>
       <section id="cta">
         <div class="cta__wrapper">
-          <h1 class="cta__header">PRE-SAVE OUR FUTURE RELEASE</h1>
+          <!-- <h2 class="cta__sub--header">NEW SINGLE</h2>
+          <h1 class="cta__header">'WHAT ARE YOU WAITING FOR'</h1>
+          <h2 class="cta__sub--header">OUT NOW</h2> -->
           <figure>
-            <img class="cta__img" src="./assets/cta-img.jpg" alt="" />
+            <img
+              class="cta__img"
+              src="./assets/Artwork_WhatAreYouWaitingFor_3000x3000_highres.webp"
+              alt=""
+            />
           </figure>
 
-          <button class="cta__btn"><a href="">PRE SAVE NOW</a></button>
+          <button class="cta__btn">
+            <a target="_blank" href="https://lnk.to/bigwheels"
+              >NEW SINGLE OUT NOW</a
+            >
+          </button>
+        </div>
+        <img class="dots__img" src="./assets/sofar-sounds-1.jpg" alt="" />
+      </section>
+      <section id="landing">
+        <h1 id="left-text" class="landing__h1">
+          <span style="font-family: 'Courier New', Courier, monospace">'</span>
+          BIG WHEELS<span style="font-family: 'Courier New', Courier, monospace"
+            >'</span
+          >
+          is a powerhouse
+          <br />
+          <br />
+
+          <div id="right-text" class="right">
+            golden<span style="font-family: 'Courier New', Courier, monospace"
+              >-</span
+            >rock duo crafting a timeless sound
+          </div>
+        </h1>
+        <div class="landing__background"></div>
+        <section id="cover"></section>
+      </section>
+
+      <section id="instagram">
+        <div class="spotify__wrapper">
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/2oAWHEdC4K2gTv29qWXlMp?utm_source=generator&theme=0"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/43TxkVkRAHwvdkYuwLkUKp?utm_source=generator"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/31ZCLQSie6ridr3f0v1IP6?utm_source=generator"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/3egwWcskG9FeZHrA2Qyy2h?utm_source=generator"
+              width="80%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </section>
+
       <section id="upcoming-shows">
         <a
           href="https://www.songkick.com/artists/10211399"
@@ -97,60 +184,25 @@
         </div> -->
       </section>
 
-      <section id="instagram">
-        <div class="spotify__wrapper">
-          <div class="follow__wrapper">
-            <iframe
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/track/2oAWHEdC4K2gTv29qWXlMp?utm_source=generator&theme=0"
-              width="80%"
-              height="352"
-              frameborder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="follow__wrapper">
-            <iframe
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/track/43TxkVkRAHwvdkYuwLkUKp?utm_source=generator"
-              width="80%"
-              height="352"
-              frameborder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="follow__wrapper">
-            <iframe
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/track/31ZCLQSie6ridr3f0v1IP6?utm_source=generator"
-              width="80%"
-              height="352"
-              frameborder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="follow__wrapper">
-            <iframe
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/track/3egwWcskG9FeZHrA2Qyy2h?utm_source=generator"
-              width="80%"
-              height="352"
-              frameborder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
-      </section>
       <script id="replace_with_footer" src="./footer.js"></script>
     </main>
     <script src="./script.js"></script>
   </body>
+  <style>
+    .nav__link--anchor {
+      color: white;
+    }
+
+    .link__hover-effect:after {
+      background-color: white;
+    }
+
+    #footer .nav__link--anchor {
+      color: #6f5c3e;
+    }
+
+    nav {
+      background: rgba(20, 20, 20, 0.466);
+    }
+  </style>
 </html>
