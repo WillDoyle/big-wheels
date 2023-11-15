@@ -20,8 +20,8 @@
     ></script>
 
     <body>
-      <nav id="mobileNav">
-        <ul class="nav__links">
+      <nav id="mobileNav" class="close">
+        <ul id="mobile__nav--links" class="nav__links">
           <li class="nav__link--mobile">
             <a class="link__hover-effect nav__link--anchor" href="./index.html"
               >HOME</a
@@ -57,12 +57,49 @@
               >CONTACT</a
             >
           </li>
+          <ul class="social__links">
+            <li class="social__link">
+              <a
+                class="social__anchor"
+                target="_blank"
+                href="https://www.instagram.com/bigwheelsband/"
+                ><img src="./assets/instagram.svg" alt="" class="social__img"
+              /></a>
+            </li>
+
+            <li class="social__link">
+              <a
+                class="social__anchor"
+                target="_blank"
+                href="https://www.facebook.com/bigwheelsbandofficial"
+                ><img src="./assets/facebook.svg" alt="" class="social__img"
+              /></a>
+            </li>
+
+            <li class="social__link">
+              <a
+                class="social__anchor"
+                target="_blank"
+                href="https://www.youtube.com/channel/UCbwNh-YCqiH2tbDORxYhwXw"
+                ><img src="./assets/youtube.svg" alt="" class="social__img"
+              /></a>
+            </li>
+
+            <li class="social__link">
+              <a
+                class="social__anchor"
+                target="_blank"
+                href="https://www.tiktok.com/@bigwheelsband"
+                ><img src="./assets/tiktok.svg" alt="" class="social__img"
+              /></a>
+            </li>
+          </ul>
         </ul>
         <svg
           class="ham hamRotate ham1"
           viewBox="0 0 100 100"
           width="80"
-          onclick="this.classList.toggle('active')"
+          onclick="this.classList.toggle('active'); hideMobileNav();"
         >
           <path
             class="line top"
@@ -185,6 +222,9 @@
     }
 
     .ham {
+      position: absolute;
+      top: 5px;
+      right: 5px;
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
       transition: transform 400ms;

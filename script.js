@@ -40,6 +40,13 @@ function scrollFunction() {
   
 }
 
+function hideMobileNav(){
+  const navLinks = document.getElementById('mobile__nav--links');
+  const mobileNav = document.getElementById('mobileNav');
+  navLinks.classList.toggle('open');
+  mobileNav.classList.toggle('close');
+}
+
 function contact(event){
   event.preventDefault();
   
