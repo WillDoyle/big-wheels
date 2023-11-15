@@ -11,15 +11,15 @@ function scrollFunction() {
   removeLink();
     if (window.innerWidth > 960) {
       if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 900) {
-        document.getElementById("cover").style.transform = "scale(0.6)";
-        document.getElementById("left-text").style.transform = "translate(-50%, -50%)";
-        document.getElementById("right-text").style.transform = "translate(8%, -50%)";
+        // document.getElementById("cover").style.transform = "scale(0.6)";
+        // document.getElementById("left-text").style.transform = "translate(-50%, -50%)";
+        // document.getElementById("right-text").style.transform = "translate(8%, -50%)";  
 
       }
       else{
-        document.getElementById("cover").style.transform = "scale(1)";
-        document.getElementById("left-text").style.transform = "translate(-100%, -50%)";
-        document.getElementById("right-text").style.transform = "translate(100%, -50%)";
+        // document.getElementById("cover").style.transform = "scale(1)";
+        // document.getElementById("left-text").style.transform = "translate(-100%, -50%)";
+        // document.getElementById("right-text").style.transform = "translate(100%, -50%)";
 
       }
 
