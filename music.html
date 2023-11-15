@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BIG WHEELS | MUSIC</title>
     <link rel="icon" type="image/x-icon" href="/assets/bigwheelslogo.png" />
+    <script src="/script.js"></script>
   </head>
 
   <style>
@@ -17,9 +18,11 @@
     </header>
     <main>
       <section id="music">
-        <h1 id="music__header" class="cta__header">
-          OUT NOW <br />
-          <span class="music__text">'HURRICANE THERAPY'</span>
+        <h1 class="header__text">
+          <span style="font-size: 2.25em">'WHAT ARE YOU WAITING FOR'</span>
+          <br /><span style="font-weight: 300; font-family: Shrikhand, cursive"
+            >OUT NOW ON ALL PLATFORMS</span
+          >
         </h1>
 
         <div class="music__background" src="" alt=""></div>
@@ -27,13 +30,13 @@
         <img
           id="music__img"
           class="cta__img"
-          src="./assets/hurricane therapy.jpg"
+          src="./assets/Artwork_WhatAreYouWaitingFor_3000x3000_highres.webp"
           alt=""
         />
         <div class="streaming__wrapper">
           <a
             target="_blank"
-            href="https://open.spotify.com/track/3egwWcskG9FeZHrA2Qyy2h?si=fb271106da824a97"
+            href="https://open.spotify.com/track/3JxB6sy22jedqZX7GUzEXX?si=2387b916abea4a93"
           >
             <img
               src="./assets/spotify-dark.png"
@@ -43,7 +46,7 @@
           </a>
           <a
             target="_blank"
-            href="https://music.apple.com/us/album/hurricane-therapy/1689874934?i=1689875176"
+            href="https://music.apple.com/au/album/what-are-you-waiting-for-single/1710431831"
           >
             <img
               src="./assets/apple-music-dark.png"
@@ -51,17 +54,17 @@
               class="streaming__img"
             />
           </a>
-          <a
-            target="_blank"
-            href="https://bigwheelsbandofficial.bandcamp.com/track/hurricane-therapy"
-          >
-            <img
-              src="./assets/bandcamp-dark.png"
-              alt=""
-              class="streaming__img"
-            />
-          </a>
         </div>
+      </section>
+
+      <section id="testimonial">
+        <h1 class="header__text" style="font-weight: 300">
+          ‘What Are You Waiting For?’ brings enticing guitar riffs to the table,
+          making you really sit and want to listen to the incredible depth
+          throughout.
+          <br />
+          - RGM PRESS
+        </h1>
       </section>
 
       <section id="instagram">
@@ -131,24 +134,26 @@
       var streamingImages = document.querySelectorAll(".streaming__img");
 
       function changeMusic() {
-        if (
-          document.body.scrollTop > 10 ||
-          document.documentElement.scrollTop < 100
-        ) {
-          musicElement.classList.add("background");
-          musicHeader.classList.add("white");
+        if (window.innerWidth > 960) {
+          if (
+            document.body.scrollTop > 10 ||
+            document.documentElement.scrollTop < 100
+          ) {
+            musicElement.classList.add("background");
+            musicHeader.classList.add("white");
 
-          for (var i = 0; i < streamingImages.length; i++) {
-            var imgElement = streamingImages[i];
-            imgElement.classList.add("invert");
-          }
-        } else {
-          musicElement.classList.remove("background");
-          musicHeader.classList.remove("white");
+            for (var i = 0; i < streamingImages.length; i++) {
+              var imgElement = streamingImages[i];
+              imgElement.classList.add("invert");
+            }
+          } else {
+            musicElement.classList.remove("background");
+            musicHeader.classList.remove("white");
 
-          for (var i = 0; i < streamingImages.length; i++) {
-            var imgElement = streamingImages[i];
-            imgElement.classList.remove("invert");
+            for (var i = 0; i < streamingImages.length; i++) {
+              var imgElement = streamingImages[i];
+              imgElement.classList.remove("invert");
+            }
           }
         }
       }
@@ -168,9 +173,9 @@
       top: 0;
 
       height: 160vh;
-      padding: 10em 0em 20em 0em;
+      padding: 3em 0em 20em 0em;
 
-      background-color: #fff;
+      background-color: #f9f6ef;
       transition: all 300ms ease-in-out;
       overflow: hidden;
 
@@ -178,11 +183,53 @@
       /* Make the background image not repeat */
     }
 
+    .background .header__text {
+      color: #f9f6ef;
+    }
+    .background .streaming__img {
+      filter: invert();
+    }
+
+    .header__text {
+      color: #242424;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .follow__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #music .header__text {
+      display: flex;
+      flex-direction: column;
+      padding: 8em 0em 1em 0em;
+      height: fit-content;
+    }
+
     .music__text {
       font-weight: 100;
       font-size: 0.7em;
       margin: 0 auto;
       text-align: center;
+    }
+
+    #testimonial {
+      position: relative;
+      height: fit-content;
+      background: #655a3f;
+    }
+
+    #testimonial .header__text {
+      color: #fbe19f;
+    }
+    #testimonial .header__text::selection {
+      background-color: #fbe19f;
+      color: #655a3f;
     }
 
     .music__background {
@@ -194,7 +241,7 @@
       /* Set the background size to cover the entire card */
       background-size: cover;
       opacity: 1;
-      background: #fff;
+      background: #f9f6ef;
       width: 100%;
       height: 100%;
       height: 0;
@@ -209,7 +256,7 @@
     }
 
     #music__header.white {
-      color: #fff;
+      color: #f9f6ef;
       font-size: 10em;
     }
 

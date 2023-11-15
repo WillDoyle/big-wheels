@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="/assets/bigwheelslogo.png" />
   </head>
 
+  <script src="/script.js"></script>
+
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
   </style>
@@ -139,6 +141,31 @@
     .merch__item:hover {
       transform: translateY(2px);
       border: 3px solid #fbe19f;
+    }
+
+    @media (max-width: 768px) {
+      #merch {
+        height: fit-content;
+        padding: 5em 0em;
+      }
+      .cta__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        margin: 2em;
+        text-align: center;
+      }
+
+      .merch__wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .merch__item {
+        padding: 0;
+        margin: 1em auto;
+      }
     }
   </style>
 </html>

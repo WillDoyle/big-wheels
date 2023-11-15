@@ -6,6 +6,7 @@
     <title>BIG WHEELS | THE BAND</title>
     <link rel="icon" type="image/x-icon" href="/assets/bigwheelslogo.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="/script.js"></script>
   </head>
 
   <style>
@@ -21,7 +22,33 @@
     <section id="bio">
       <div class="bio__container">
         <div class="bio__wrapper">
-          <h1>ABOUT <br />THE BAND</h1>
+          <h1 class="header__text">
+            <span style="font-size: 2.25em">ABOUT THE BAND</span>
+            <div
+              style="
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <span
+                style="display: inline; margin-right: 0.5em"
+                class="material-symbols-outlined location__icon"
+              >
+                pin_drop </span
+              ><span
+                style="
+                  display: inline;
+                  font-family: Shrikhand, cursive;
+                  letter-spacing: 0.1em;
+                  font-size: 1.2em;
+                  font-weight: 300;
+                "
+                >Sydney, Australia</span
+              >
+            </div>
+          </h1>
 
           <h2>
             Emerging from the vibrant music scene of Sydney, Australia, Big
@@ -84,9 +111,9 @@
       </div>
       <div class="bio__container">
         <div class="texture"></div>
-        <img class="bio__img" src="./assets/sofar-sounds-1.jpg" alt="" />
+        <img class="bio__img reveal" src="./assets/sofar-sounds-1.jpg" alt="" />
 
-        <img class="bio__img" src="./assets/frankly.JPG" alt="" />
+        <img class="bio__img reveal" src="./assets/frankly.JPG" alt="" />
         <img class="bio__img reveal" src="./assets/BIGBARBICAN030.jpg" alt="" />
         <img class="bio__img reveal" src="./assets/daydreams.jpg" alt="" />
       </div>
@@ -128,12 +155,6 @@
       margin: 0.5em auto;
     }
 
-    #bio h1 {
-      color: #fff;
-      font-size: 2em;
-      margin-top: 2em;
-    }
-
     .bio__container {
       display: flex;
       align-items: stretch;
@@ -143,6 +164,7 @@
       flex-direction: column;
       z-index: 1;
       width: 50%;
+      padding-top: 10em;
       overflow: hidden;
     }
 
@@ -165,22 +187,38 @@
       overflow: hidden;
     }
 
+    .header__text {
+      display: flex;
+      align-items: start;
+
+      flex-direction: column;
+      font-size: 1.25em;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: left;
+      padding-top: 2em;
+      color: #f9f6ef;
+      font-family: "Shrikhand", cursive;
+    }
+
     .guitar__svg {
       opacity: 1;
       position: absolute;
-      top: 0;
-      left: 90%;
+      top: 50px;
+      right: 5px;
+      cursor: pointer;
 
-      transform: translate(-50%, 50%) scale(0.5) rotate(30deg);
+      transform: translate(-50%, 100%) scale(0.5) rotate(30deg);
       z-index: 2;
       transition: all 300ms ease-in-out;
     }
 
     .guitar__svg:hover {
-      top: 0;
-      left: 90%;
+      top: 50px;
+      right: 5px;
 
-      transform: translate(-50%, 50%) scale(0.5) rotate(0deg);
+      transform: translate(-50%, 100%) scale(0.5) rotate(0deg);
     }
 
     .site__logo {
@@ -204,13 +242,6 @@
 
     .big__logo:hover {
       transform: rotate(30deg);
-    }
-
-    #bio .bio__container h1 {
-      margin-top: 1em;
-      text-align: left;
-      font-size: 4em;
-      font-family: "Shrikhand", cursive;
     }
 
     .bio__img {
@@ -244,6 +275,53 @@
       line-height: 1.5;
       font-weight: 100;
       font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .location__icon {
+      display: inline;
+      float: left;
+    }
+
+    @media (max-width: 768px) {
+      #bio {
+        display: flex;
+        flex-direction: column;
+      }
+      .bio__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin: 0;
+      }
+
+      .bio__container {
+        width: 100%;
+      }
+
+      .bio__container:nth-child(1) {
+        padding-top: 3em;
+      }
+
+      .bio__img:nth-child(odd),
+      .bio__img:nth-child(even) {
+        transform: translateX(0px);
+        padding: 1em;
+      }
+
+      .bio__container:nth-child(2) {
+        width: 100%;
+        padding: 0;
+      }
+
+      .guitar__svg {
+        top: 250vh;
+        left: 70vw;
+      }
+
+      .guitar__svg:hover {
+        top: 250vh;
+        left: 70vw;
+      }
     }
   </style>
 </html>
