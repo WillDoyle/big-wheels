@@ -230,6 +230,14 @@ nav {
   z-index: 5;
 }
 
+.small {
+  position: absolute;
+  top: 5px;
+  width: 80px;
+  height: 80px;
+  padding: 0.5em;
+}
+
 .dots__img {
   width: 100%;
   height: 100%;

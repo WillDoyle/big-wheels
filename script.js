@@ -5,6 +5,9 @@
 window.onscroll = function() {scrollFunction();};
 const body = document.querySelector('body');
 
+window.addEventListener('load', () => {
+  quicklink.listen();
+});
 
 
 function scrollFunction() {

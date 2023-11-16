@@ -32,6 +32,7 @@
           class="cta__img"
           src="./assets/Artwork_WhatAreYouWaitingFor_3000x3000_highres.webp"
           alt=""
+          loading="lazy"
         />
         <div class="streaming__wrapper">
           <a
@@ -42,6 +43,7 @@
               src="./assets/spotify-dark.png"
               alt=""
               class="streaming__img"
+              loading="lazy"
             />
           </a>
           <a
@@ -52,6 +54,7 @@
               src="./assets/apple-music-dark.png"
               alt=""
               class="streaming__img"
+              loading="lazy"
             />
           </a>
         </div>
@@ -63,7 +66,12 @@
           making you really sit and want to listen to the incredible depth
           throughout.
           <br />
-          - RGM PRESS
+          <a
+            class="testimonial__link link__hover-effect"
+            target="_blank"
+            href="https://rgm.press/we-review-the-new-single-from-big-wheels-what-are-you-waiting-for/review/review-review/"
+            >- RGM PRESS</a
+          >
         </h1>
       </section>
 
@@ -72,8 +80,21 @@
           <div class="follow__wrapper">
             <iframe
               style="border-radius: 12px"
+              src="https://open.spotify.com/embed/track/3JxB6sy22jedqZX7GUzEXX?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <div class="follow__wrapper">
+            <iframe
+              style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/2oAWHEdC4K2gTv29qWXlMp?utm_source=generator&theme=0"
-              width="80%"
+              width="100%"
               height="352"
               frameborder="0"
               allowfullscreen=""
@@ -85,7 +106,7 @@
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/43TxkVkRAHwvdkYuwLkUKp?utm_source=generator"
-              width="80%"
+              width="100%"
               height="352"
               frameborder="0"
               allowfullscreen=""
@@ -97,7 +118,7 @@
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/31ZCLQSie6ridr3f0v1IP6?utm_source=generator"
-              width="80%"
+              width="100%"
               height="352"
               frameborder="0"
               allowfullscreen=""
@@ -109,7 +130,7 @@
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/3egwWcskG9FeZHrA2Qyy2h?utm_source=generator"
-              width="80%"
+              width="100%"
               height="352"
               frameborder="0"
               allowfullscreen=""
@@ -190,15 +211,18 @@
       filter: invert();
     }
 
+    #testimonial a {
+      color: #d4be86;
+      display: flex;
+    }
+
+    #testimonial .link__hover-effect:after {
+      background-color: #d4be86;
+    }
+
     .header__text {
       color: #242424;
       height: 40vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .follow__wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -220,16 +244,24 @@
 
     #testimonial {
       position: relative;
+      display: flex;
+      flex-direction: column;
       height: fit-content;
       background: #655a3f;
     }
 
     #testimonial .header__text {
+      display: flex;
+      flex-direction: column;
       color: #fbe19f;
     }
     #testimonial .header__text::selection {
       background-color: #fbe19f;
       color: #655a3f;
+    }
+
+    .testimonial__link {
+      font-weight: 400;
     }
 
     .music__background {
