@@ -9,6 +9,16 @@ window.addEventListener('load', () => {
   quicklink.listen();
 });
 
+const images = document.querySelectorAll('.bio__img');
+
+const observer = new IntersectionObserver(entries =>{
+  console.log(entries);
+})
+
+observer.observe(images[0]);
+
+
+
 
 function scrollFunction() {
   removeLink();
