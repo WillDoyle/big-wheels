@@ -241,7 +241,7 @@ nav {
 
 .small {
   position: absolute;
-  top: 5px;
+  top: 0px;
   width: 80px;
   height: 80px;
   padding: 0.5em;
@@ -1074,5 +1074,11 @@ textarea {
   #right-text {
     top: 70%;
     transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 468px) {
+    .cta__btn {
+      padding: 0.25em 0.5em;
+    }
   }
 }
