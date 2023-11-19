@@ -85,7 +85,7 @@ const success = document.querySelector('.modal__overlay--success');
     success.classList.remove("modal__overlay--visible"); loading.classList.remove('modal__overlay--loading');
   }, 2000)}).catch(() =>{
       loading.classList.remove("modal__overlay--visible");
-      alert("The email service is temporarily unavailable. Please contact me directly on 19doylew@gmail.com");
+      alert("The email service is temporarily unavailable. Please contact me directly on hello@bigwheelsband.com");
   })
 }
 
