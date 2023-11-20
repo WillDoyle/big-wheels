@@ -78,7 +78,7 @@
 
       <section id="instagram">
         <div class="spotify__wrapper">
-          <div class="follow__wrapper">
+          <div class="follow__wrapper music">
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/3JxB6sy22jedqZX7GUzEXX?utm_source=generator"
@@ -91,7 +91,7 @@
             ></iframe>
           </div>
 
-          <div class="follow__wrapper">
+          <div class="follow__wrapper music">
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/2oAWHEdC4K2gTv29qWXlMp?utm_source=generator&theme=0"
@@ -103,7 +103,7 @@
               loading="lazy"
             ></iframe>
           </div>
-          <div class="follow__wrapper">
+          <div class="follow__wrapper music">
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/43TxkVkRAHwvdkYuwLkUKp?utm_source=generator"
@@ -115,7 +115,7 @@
               loading="lazy"
             ></iframe>
           </div>
-          <div class="follow__wrapper">
+          <div class="follow__wrapper music">
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/31ZCLQSie6ridr3f0v1IP6?utm_source=generator"
@@ -127,7 +127,7 @@
               loading="lazy"
             ></iframe>
           </div>
-          <div class="follow__wrapper">
+          <div class="follow__wrapper music">
             <iframe
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/track/3egwWcskG9FeZHrA2Qyy2h?utm_source=generator"
@@ -155,30 +155,30 @@
       var musicSection = document.getElementById("music");
       var streamingImages = document.querySelectorAll(".streaming__img");
 
-      function changeMusic() {
-        if (window.innerWidth > 960) {
-          if (
-            document.body.scrollTop > 10 ||
-            document.documentElement.scrollTop < 100
-          ) {
-            musicElement.classList.add("background");
-            musicHeader.classList.add("white");
+      // function changeMusic() {
+      //   if (window.innerWidth > 960) {
+      //     if (
+      //       document.body.scrollTop > 10 ||
+      //       document.documentElement.scrollTop < 100
+      //     ) {
+      //       musicElement.classList.add("background");
+      //       musicHeader.classList.add("white");
 
-            for (var i = 0; i < streamingImages.length; i++) {
-              var imgElement = streamingImages[i];
-              imgElement.classList.add("invert");
-            }
-          } else {
-            musicElement.classList.remove("background");
-            musicHeader.classList.remove("white");
+      //       for (var i = 0; i < streamingImages.length; i++) {
+      //         var imgElement = streamingImages[i];
+      //         imgElement.classList.add("invert");
+      //       }
+      //     } else {
+      //       musicElement.classList.remove("background");
+      //       musicHeader.classList.remove("white");
 
-            for (var i = 0; i < streamingImages.length; i++) {
-              var imgElement = streamingImages[i];
-              imgElement.classList.remove("invert");
-            }
-          }
-        }
-      }
+      //       for (var i = 0; i < streamingImages.length; i++) {
+      //         var imgElement = streamingImages[i];
+      //         imgElement.classList.remove("invert");
+      //       }
+      //     }
+      //   }
+      // }
     </script>
   </body>
 
@@ -188,14 +188,15 @@
       color: #fbe19f;
     }
     #music {
-      position: sticky;
+      position: relative;
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-direction: column;
       top: 0;
 
-      height: 160vh;
-      padding: 3em 0em 20em 0em;
+      height: fit-content;
+      padding: 3em 0em 3em 0em;
 
       background-color: #f9f6ef;
       transition: all 300ms ease-in-out;
@@ -396,6 +397,20 @@
       padding: 0.5em 1em;
     }
 
+    .spotify__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .music .follow__wrapper {
+      margin: 5em 0em;
+      padding: 0;
+    }
+
     .merch__price {
       color: #242424;
       font-size: 1.25em;
@@ -416,6 +431,35 @@
     #instagram {
       position: relative;
       background: #242424;
+    }
+
+    @media (max-width: 1378px) {
+      .follow__wrapper {
+        flex-basis: 50.333333% !important;
+        padding: 2em 5em;
+        margin: 0 auto;
+      }
+
+      .spotify__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .spotify__wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 468px) {
+      .spotify__wrapper {
+        display: flex;
+        flex-direction: column;
+      }
     }
   </style>
 </html>
