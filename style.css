@@ -153,7 +153,6 @@ nav {
   align-items: center;
   padding: 20px 20px;
   opacity: 0;
-
   z-index: 3;
   transition: all 300ms ease-in-out;
   background: #24242486;
@@ -327,6 +326,10 @@ nav {
     opacity: 0;
   }
 
+  70% {
+    transform: translateY(0px);
+  }
+
   100% {
     transform: translateY(0px);
     opacity: 1;
@@ -497,7 +500,7 @@ nav {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   opacity: 0;
   z-index: 2;
-  animation: fade-in 800ms;
+  animation: fade-in 1000ms;
   animation-delay: 800ms;
   animation-fill-mode: forwards;
 }
@@ -528,9 +531,11 @@ nav {
   border-radius: 10px;
   z-index: 2;
   opacity: 0;
-  animation: fade-in 800ms;
+  animation: fade-in 1000ms;
   animation-delay: 1200ms;
   animation-fill-mode: forwards;
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
 .cta__btn:before {
@@ -540,30 +545,22 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
+  color: #655a3f;
   background-color: #f9f6ef;
-
   transition: top 0.3s ease;
 }
 
-.cta__btn a {
-  font-size: 1.25em;
-  font-weight: 700;
-  min-width: 250px;
-  color: #f9f6ef;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+.cta__btn:hover {
+  color: #655a3f;
+  transition: all 400ms ease-in-out;
 }
 
 .cta__btn:hover:before {
   top: 0;
-}
-
-.cta__btn:hover a {
+  content: "";
   color: #655a3f;
+  background: #f9f6ef;
+  z-index: -1;
 }
 
 /* UPCOMING DATES SECTION */
@@ -974,7 +971,7 @@ textarea {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 898px) {
   #navBar {
     display: none;
   }
