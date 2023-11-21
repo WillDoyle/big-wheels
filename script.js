@@ -5,9 +5,6 @@
 window.onscroll = function() {scrollFunction();};
 const body = document.querySelector('body');
 
-window.addEventListener('load', () => {
-  quicklink.listen();
-});
 
 const images = document.querySelectorAll('.bio__img');
 
