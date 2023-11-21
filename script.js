@@ -89,17 +89,21 @@ function contact(event){
   
   const loading = document.querySelector('.modal__overlay--loading');
 const success = document.querySelector('.modal__overlay--success');
+const sending = document.querySelector('.loading__h1');
 
-  loading.classList += ' modal__overlay--visible'
+  loading.classList += ' modal__overlay--visible';
+  sending.classList += ' visible';
 
   emailjs.sendForm('service_g2kpj2h', 'template_rs0x8jv', event.target, 'Z2FSRvzQFlssyX1a0')
   .then(() => {   
-     
+    
+         sending.classList.remove('visible');
          loading.classList.remove("modal__overlay--visible");
   success.classList += " modal__overlay--visible"; setTimeout(() => {
-    success.classList.remove("modal__overlay--visible"); loading.classList.remove('modal__overlay--loading');
+    success.classList.remove("modal__overlay--visible"); loading.classList.remove('modal__overlay--visible');
   }, 2000)}).catch(() =>{
       loading.classList.remove("modal__overlay--visible");
+      sending.classList.remove('visible');
       alert("The email service is temporarily unavailable. Please contact me directly on hello@bigwheelsband.com");
   })
 }

@@ -66,10 +66,11 @@
 
             <div class="modal__overlay modal__overlay--loading">
               <i class="fa-solid fa-spinner"></i>
+              <h1 class="loading__h1">Sending...</h1>
             </div>
 
             <div class="modal__overlay modal__overlay--success">
-              Thanks for the message! Looking forward to speaking to you soon.
+              Thanks for your message! We will be in contact soon.
             </div>
           </div>
         </div>
@@ -96,12 +97,15 @@
 
   <style>
     #contact-us {
-      height: 80vh;
+      position: relative;
+      height: fit-content;
       background-color: #655a3f;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      padding: 15em 0em 15em 0em;
+      margin: 0 auto;
     }
 
     .contact__header{
@@ -113,6 +117,7 @@
     .modal__overlay--visible {
   z-index: 1;
   display: flex;
+  height: 100%;
 }
 
 
